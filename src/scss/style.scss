@@ -35,7 +35,11 @@ and Blueprint http://www.blueprintcss.org/
 @import 'global';
 @import 'typography';
 @import 'layout';
+
+@import 'header';
 @import 'menu';
+@import 'hero';
+
 @import 'content';
 @import 'postformats';
 @import 'media';
@@ -43,3 +47,4 @@ and Blueprint http://www.blueprintcss.org/
 @import 'comments';
 @import 'widgets';
 @import 'infinitescroll';
+

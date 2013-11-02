@@ -1,69 +1,46 @@
-/* =Menu
------------------------------------------------ */
+/* ============================================================
+
+  Primary Navigation
+
+============================================================ */
 
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+  display: block;
+  float: left;
 
-	// first level
-	ul {
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		li {
-			float: left;
-			position: relative;
-
-			a {
-				display: block;
-				text-decoration: none;
-			}
-
-			// link hover
-			&:hover {
-				> a { }
-				> ul { display: block; }
-			}
-
-		}
-
-		li.current_page_item, li.current-menu-item {
-			a {}
-		}
-
-		// second level
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			display: none;
-			float: left;
-			position: absolute;
-				top: $vspacing;
-				left: 0;
-			z-index: 99999;
-
-			&:hover {
-				> a {};
-			}
-
-			li {
-				a {
-					width: 200px;
-					&:hover {};
-				}
-			}
-
-			// third level
-			ul {
-				left: 100%;
-				top: 0;
-			}
-
-		}
-	}
-
+  ul {
+    list-style: none;
+    padding: 0 $vspacing;
+    margin: 0;
+    overflow: hidden;
+    
+    li {
+      float: left;
+      padding: 0 $vspacing / 1.5;
+      line-height: 84px;
+      
+      a {
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 200;
+        text-transform: uppercase;
+        float: left;
+        
+        &:hover {
+          color: #fff !important;
+          -webkit-transform: scale(1.1);
+          text-shadow: none !important;
+          text-shadow: 0 5px 3px #000;
+        }
+      }
+    }
+    
+    &:hover li a {
+      color: transparent;
+      text-shadow: 0 0 3px #fff, 0 0 10px #fff;
+    }
+  } 
 }
 
 /* Small menu */

@@ -3,17 +3,18 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: $base-font;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1.5;
+  color: $colour-black;
+  font-family: $base-font;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	font-family: $header-font;
-	clear: both;
+	font-weight: 200;
 }
 hr {
 	background-color: #ccc;

@@ -11,6 +11,7 @@
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet'>
 
     <script src="assets/components/modernizr.js"></script>
 
@@ -18,28 +19,42 @@
   <body id="page-home">
 
     <header id="masthead" class="site-header" role="banner">
-      <h1 class="site-title"><a href="/" rel="home">Qibelly</a></h1>
-      
-      <nav class="main-navigation" role="navigation">
-        <h2 class="menu-toggle">Menu</h2>
-        <ul>
-            <li><a href="">Classes</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Videos</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
-      
-      <form class="search-form" action="/" method="get" role="search">
-        <label for="param_search">Search for:</label>
-        <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" id="param_search">
-        <button type="submit" class="search-submit">Search</button>
-      </form>
+      <div class="site-branding">
+        <a href="/" rel="home" title="QiBelly Home"><h1 class="site-title">Qibelly</h1></a>
+        
+        <nav class="main-navigation" role="navigation">
+          <h2 class="menu-toggle">Menu</h2>
+          <ul>
+              <li><a href="">Classes</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Videos</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <form class="search-form" action="/" method="get" role="search">
+          <label for="param_search">Search for:</label>
+          <input type="text" class="search-field" placeholder="Search &hellip;" value="" name="s" id="param_search">
+          <button type="submit" class="search-submit">Search</button>
+        </form>
+      </div>
     </header><!-- #masthead -->
 	
     <div class="hero">
-      
+      <ul class="hero-items">
+        <li id="hero-1">
+          <div>
+            <h2>A no-nonsense Approach to Health and Wellbeing</h2>  
+          </div>
+          <a href="" class="hero-cta">sign up for<br>a <strong>Free</strong> class</a>
+        </li>
+      </ul>
+      <nav class="hero-control">
+        <a href="#hero-1" title="Jump to Slide 1">Slide 1</a>
+        <a href="#hero-2" title="Jump to Slide 2">Slide 2</a>
+        <a href="#hero-3" title="Jump to Slide 3">Slide 3</a>
+      </nav>
     </div>
 
     <main class="main" role="main">

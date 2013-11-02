@@ -1,0 +1,98 @@
+.hero {
+  width: 100%;
+  height: 480px;
+  background: url(/assets/img/hero_sm.jpg) no-repeat center center;
+  background-size: 140% auto;
+  
+  .hero-items {
+    list-style: none;
+    margin: 0 auto;
+    padding: 124px 0 0 0;
+    width: 100%;
+    height: 480px;
+    max-width: 976px;
+    
+    li {
+      display: block;
+      width: 100%;
+      position: relative;
+      
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 340px;
+      
+      & > div {
+        width: 480px;
+        float: left;
+        padding-left: 15px;
+      }
+      
+      h2 {
+        font-size: 48px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        background: $colour-red;
+        display: inline;
+        letter-spacing: -1px;
+        
+        box-shadow: 15px 0 0 $colour-red, -15px 0 0 $colour-red;
+        line-height: 1.35em;
+      }
+      
+      a {
+        
+        float: right;
+        text-align: right;
+        max-width: 280px;
+
+        font-size: 48px;
+        font-weight: 200;
+        letter-spacing: -1px;
+        text-decoration: none;
+        line-height: 1em;
+
+        color: rgba(255,255,255,.8);
+        
+        background: url(../img/ico_hero-arrow.png) no-repeat 98% 50%;
+        padding-right: $vspacing * 1.75;
+        
+        strong {
+          text-transform: uppercase;
+        }
+        
+        &:hover {
+          color: #fff;
+          background-position: 100% 50%;
+          padding-right: $vspacing * 2;
+        }
+      }
+    }
+  }
+  
+  .hero-control {
+    display: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  .hero .hero-items li a {
+    background: url(../img/ico_hero-arrow_@2x.png) no-repeat 98% 50%;
+    background-size: 16px auto;
+  }
+}
+
+@media only screen and (min-width: $break-small) { 
+  .hero {
+    background-image: url(/assets/img/hero_md.jpg);
+  }
+}
+@media only screen and (min-width: $break-large) { 
+}
+@media only screen and (min-width: $break-huge) {
+  .hero {
+    background-image: url(/assets/img/hero_lg.jpg)
+  }
+}

@@ -4,6 +4,29 @@
 /* border box all the things */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+/* top down */
+html {
+  background-image: url(/assets/img/squairy_light.png); 
+}
+
+
+
+@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  html {
+    background: url(/assets/img/squairy_light_@2x.png);
+    background-size: 200px;
+  }
+}
+
+/* anchors */
+a {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
 /* Alignment */
 .alignleft {
 	display: inline;
@@ -50,8 +73,6 @@
 }
 
 /* Clearing */
-.clear,
-[class*="content"],
-[class*="site"] {
+.clear {
 	@include clearfix;
 }
