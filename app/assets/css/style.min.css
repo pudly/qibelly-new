@@ -1,0 +1,1114 @@
+/*!
+ * fireshell
+ * Fiercely quick and opinionated front-ends
+ * http://getfireshell.com
+ * @author Todd Motto
+ * @version 1.1.0
+ * Copyright 2013. MIT licensed.
+ */
+
+/*!
+Theme Name: _s
+Theme URI: http://underscores.me
+Author: Automattic
+Author URI: http://automattic.com/
+Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Version: 1.3-wpcom
+License: GNU General Public License v2 or later
+License URI: License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Domain Path: /languages/
+Text Domain: _s
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+_s is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centred in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+body {
+  background: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+blockquote,
+q {
+  quotes: "" "";
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
+/* Supported Values for $layout:
+  null | content-sidebar | content-sidebar-sidebar | sidebar-content | sidebar-content-sidebar | sidebar-sidebar-content
+*/
+
+/* Global colours */
+
+/* Media Query Breakpoints */
+
+/* =Global
+----------------------------------------------- */
+
+/* border box all the things */
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* top down */
+
+html {
+  background-image: url(/assets/img/squairy_light.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  html {
+    background: url(/assets/img/squairy_light_@2x.png);
+    background-size: 200px;
+  }
+}
+
+/* anchors */
+
+a {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+/* Alignment */
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 20px;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+
+.screen-reader-text {
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
+}
+
+/* Clearing */
+
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+
+.clear:after {
+  clear: both;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  color: #222222;
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro";
+  font-weight: 200;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 20px;
+}
+
+/* Text elements */
+
+p {
+  margin-bottom: 20px;
+}
+
+ul,
+ol {
+  margin: 0 0 20px 3em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 20px 20px;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 20px;
+}
+
+address {
+  margin: 0 0 20px;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
+  overflow: auto;
+  max-width: 100%;
+}
+
+code,
+kbd,
+tt,
+var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
+
+figure {
+  margin: 0;
+}
+
+table {
+  margin: 0 0 20px;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+}
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+  *vertical-align: middle;
+  /* Improves appearance and consistency in all browsers */
+}
+
+button,
+input {
+  line-height: normal;
+  /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid #ccc;
+  border-color: #ccc #ccc #bbb #ccc;
+  border-radius: 3px;
+  background: #e6e6e6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa #bbb;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  border-color: #aaa #bbb #bbb #bbb;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Addresses box sizing set to content-box in IE8/9 */
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+  padding: 3px;
+}
+
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding-left: 3px;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  width: 98%;
+}
+
+/* Links */
+
+a {
+  color: royalblue;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: midnightblue;
+}
+
+a:visited {
+  color: purple;
+}
+
+/* ============================================================
+
+  .site-header
+
+============================================================ */
+
+.site-header .site-branding {
+  max-width: 976px;
+  margin: auto;
+}
+
+/* logo */
+
+.site-title {
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  width: 110px;
+  height: 84px;
+  background: url(/assets/img/logo.png) no-repeat;
+  float: left;
+}
+
+/* search */
+
+.search-form {
+  float: right;
+  line-height: 84px;
+  padding-top: 20px;
+  width: 300px;
+  position: relative;
+}
+
+.search-form button {
+  display: none;
+}
+
+.search-form input {
+  width: 44px;
+  display: block;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.25);
+  border: 0;
+  border-radius: 44px;
+  height: 44px;
+  outline: 0;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.25);
+  float: right;
+  text-indent: 10px;
+  color: transparent !important;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.search-form input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.search-form input:-moz-placeholder {
+  /* Firefox 18- */
+  color: transparent;
+}
+
+.search-form input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: transparent;
+}
+
+.search-form input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.search-form input:focus {
+  width: 100%;
+  color: #fff !important;
+}
+
+.search-form label {
+  overflow: hidden;
+  text-indent: 100%;
+  width: 44px;
+  height: 44px;
+  display: block;
+  background: url(/assets/img/ico_search.png) no-repeat;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* break points */
+
+@media only screen and (min-width: 1024px) {
+  .site-header {
+    position: fixed;
+    width: 100%;
+    height: 84px;
+  }
+
+  .site-header .site-branding {
+    padding: 40px 0;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .site-title {
+    background: url(/assets/img/logo_@2x.png) no-repeat;
+    background-size: 100%;
+  }
+
+  .search-form label {
+    background: url(/assets/img/ico_search_@2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+
+/* header */
+
+/* ============================================================
+
+  Primary Navigation
+
+============================================================ */
+
+.main-navigation {
+  display: block;
+  float: left;
+}
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main-navigation ul li {
+  float: left;
+  padding: 0 13.33333px;
+  line-height: 84px;
+}
+
+.main-navigation ul li a {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 200;
+  text-transform: uppercase;
+  float: left;
+}
+
+.main-navigation ul li a:hover {
+  color: #fff !important;
+  -webkit-transform: scale(1.1);
+  text-shadow: none !important;
+  text-shadow: 0 5px 3px #000;
+}
+
+.main-navigation ul:hover li a {
+  color: transparent;
+  text-shadow: 0 0 3px #fff, 0 0 10px #fff;
+}
+
+/* Small menu */
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block;
+  }
+
+  .main-navigation ul {
+    display: none;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 480px;
+  background: url(/assets/img/hero_sm.jpg) no-repeat center center;
+  background-size: 140% auto;
+}
+
+.hero .hero-items {
+  list-style: none;
+  margin: 0 auto;
+  padding: 124px 0 0 0;
+  width: 100%;
+  height: 480px;
+  max-width: 976px;
+}
+
+.hero .hero-items li {
+  display: block;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 340px;
+}
+
+.hero .hero-items li > div {
+  width: 480px;
+  float: left;
+  padding-left: 15px;
+}
+
+.hero .hero-items li h2 {
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background: #e1110d;
+  display: inline;
+  letter-spacing: -1px;
+  box-shadow: 15px 0 0 #e1110d, -15px 0 0 #e1110d;
+  line-height: 1.35em;
+}
+
+.hero .hero-items li a {
+  float: right;
+  text-align: right;
+  max-width: 280px;
+  font-size: 48px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  text-decoration: none;
+  line-height: 1em;
+  color: rgba(255, 255, 255, 0.8);
+  background: url(../img/ico_hero-arrow.png) no-repeat 98% 50%;
+  padding-right: 35px;
+}
+
+.hero .hero-items li a strong {
+  text-transform: uppercase;
+}
+
+.hero .hero-items li a:hover {
+  color: #fff;
+  background-position: 100% 50%;
+  padding-right: 40px;
+}
+
+.hero .hero-control {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero .hero-items li a {
+    background: url(../img/ico_hero-arrow_@2x.png) no-repeat 98% 50%;
+    background-size: 16px auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: url(/assets/img/hero_md.jpg);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero {
+    background-image: url(/assets/img/hero_lg.jpg);
+  }
+}
+
+/* =Content
+----------------------------------------------- */
+
+.hentry {
+  margin: 0 0 20px;
+}
+
+.byline,
+.updated {
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 20px 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 20px;
+}
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none;
+}
+
+/* =Media
+----------------------------------------------- */
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.wp-caption {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+
+.wp-caption .wp-caption-text {
+  text-align: center;
+  margin: 0.8075em 0;
+}
+
+.gallery {
+  margin-bottom: 20px;
+}
+
+.gallery:before,
+.gallery:after {
+  content: "";
+  display: table;
+}
+
+.gallery:after {
+  clear: both;
+}
+
+.gallery .gallery-item {
+  float: left;
+}
+
+.gallery .gallery-item .gallery-icon a {
+  display: block;
+}
+
+.gallery .gallery-item .gallery-icon img {
+  border: none;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.gallery .gallery-item .gallery-caption {
+  margin: 0;
+  text-align: center;
+}
+
+/* Fluid Gallery Columns
+   works well if you remove the default gallery styling
+   by adding the following to your functions.php
+   add_filter( 'use_default_gallery_style', '__return_false' );
+*/
+
+.gallery-columns-2 .gallery-item {
+  width: 49%;
+  margin-right: 2;
+}
+
+.gallery-columns-2 .gallery-item:nth-of-type(2n - 2) {
+  margin-right: 0;
+  clear: right;
+}
+
+.gallery-columns-3 .gallery-item {
+  width: 32%;
+  margin-right: 2;
+}
+
+.gallery-columns-3 .gallery-item:nth-of-type(3n - 3) {
+  margin-right: 0;
+  clear: right;
+}
+
+.gallery-columns-4 .gallery-item {
+  width: 23.5%;
+  margin-right: 2;
+}
+
+.gallery-columns-4 .gallery-item:nth-of-type(4n - 4) {
+  margin-right: 0;
+  clear: right;
+}
+
+.gallery-columns-5 .gallery-item {
+  width: 18.4%;
+  margin-right: 2;
+}
+
+.gallery-columns-5 .gallery-item:nth-of-type(5n - 5) {
+  margin-right: 0;
+  clear: right;
+}
+
+.gallery-columns-6 .gallery-item {
+  width: 15%;
+  margin-right: 2;
+}
+
+.gallery-columns-6 .gallery-item:nth-of-type(6n - 6) {
+  margin-right: 0;
+  clear: right;
+}
+
+.gallery-columns-7 .gallery-item {
+  width: 12.57143%;
+  margin-right: 2;
+}
+
+.gallery-columns-7 .gallery-item:nth-of-type(7n - 7) {
+  margin-right: 0;
+  clear: right;
+}
+
+.gallery-columns-8 .gallery-item {
+  width: 10.75%;
+  margin-right: 2;
+}
+
+.gallery-columns-8 .gallery-item:nth-of-type(8n - 8) {
+  margin-right: 0;
+  clear: right;
+}
+
+.gallery-columns-9 .gallery-item {
+  width: 9.33333%;
+  margin-right: 2;
+}
+
+.gallery-columns-9 .gallery-item:nth-of-type(9n - 9) {
+  margin-right: 0;
+  clear: right;
+}
+
+/* Make sure embeds and iframes fit their containers */
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-main [class*="navigation"] {
+  margin: 0 0 20px;
+  overflow: hidden;
+}
+
+.site-main [class*="navigation"] .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+.site-main [class*="navigation"] .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+  margin: 0 0 20px;
+  /* Make sure select elements fit in widgets */
+  /* Search widget */
+}
+
+.widget select {
+  max-width: 100%;
+}
+
+.widget .widget-search .search-submit {
+  display: none;
+}
+
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+
+.infinite-scroll .paging-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+
+.infinity-end.neverending .site-footer {
+  display: block;
+}
