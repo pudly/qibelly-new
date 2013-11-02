@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>FireShell by @toddmotto</title>
+    <title>QiBelly</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -15,22 +15,32 @@
     <script src="assets/components/modernizr.js"></script>
 
   </head>
-  <body>
+  <body id="page-home">
 
-    <header class="header" role="banner">
-      <div class="logo">
-        <a href="/">
-          <img src="assets/img/logo.svg" alt="Logo">
-        </a>
-      </div>
-      <nav class="nav" role="navigation">
+    <header id="masthead" class="site-header" role="banner">
+      <h1 class="site-title"><a href="/" rel="home">Qibelly</a></h1>
+      
+      <nav class="main-navigation" role="navigation">
+        <h2 class="menu-toggle">Menu</h2>
         <ul>
-          <li>
-            <a href="/"></a>
-          </li>
+            <li><a href="">Classes</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Videos</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
       </nav>
-    </header>
+      
+      <form class="search-form" action="/" method="get" role="search">
+        <label for="param_search">Search for:</label>
+        <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" id="param_search">
+        <button type="submit" class="search-submit">Search</button>
+      </form>
+    </header><!-- #masthead -->
+	
+    <div class="hero">
+      
+    </div>
 
     <main class="main" role="main">
 
