@@ -1,20 +1,22 @@
-/* =Global
------------------------------------------------ */
+/* ============================================================
+
+  Global Styles
+
+============================================================ */
 
 /* border box all the things */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* top down */
 html {
-  background-image: url(/assets/img/squairy_light.png); 
+  background-image: url(../img/squairy_light.png); 
+  cursor: default;
 }
-
-
 
 @media (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
   html {
-    background: url(/assets/img/squairy_light_@2x.png);
+    background: url(../img/squairy_light_@2x.png);
     background-size: 200px;
   }
 }

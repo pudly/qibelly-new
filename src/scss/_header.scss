@@ -4,11 +4,16 @@
 
 ============================================================ */
 
+$logo-height: 84px;
+
 .site-header {
+  position: absolute;
+  width: 100%;
+  
   .site-branding {
-    max-width: 976px;
-    margin: auto;
-    
+    max-width: $grid-total;
+    margin: $vspacing;
+    height: $logo-height;
   }
   
   .main-navigation {
@@ -24,17 +29,17 @@
   overflow: hidden;
   text-indent: 100%;
   width: 110px;
-  height: 84px;
-  background: url(/assets/img/logo.png) no-repeat;
+  height: $logo-height;
+  background: url(../img/logo.png) no-repeat;
   float: left;
 }
 
 /* search */
 .search-form {
   float: right;
-  line-height: 84px;
-  padding-top: 20px;
-  width: 300px;
+  line-height: $logo-height;
+  padding-top: $vspacing;
+  width: 44px;
   position: relative;
   
   button {
@@ -90,7 +95,7 @@
     width: 44px;
     height: 44px;
     display: block;
-    background: url(/assets/img/ico_search.png) no-repeat;
+    background: url(../img/ico_search.png) no-repeat;
     position: absolute;
     right: 0;
     cursor: pointer;
@@ -103,11 +108,16 @@
   .site-header {
     position: fixed;
     width: 100%;
-    height: 84px;
-    
+    height: $logo-height;
+
     .site-branding {
       padding: ($vspacing * 2) 0;
+      margin: 0 auto;
     }
+  }
+  
+  .search-form {
+    width: 300px;
   }
 }
 
@@ -115,12 +125,12 @@
 @media (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
   .site-title {
-    background: url(/assets/img/logo_@2x.png) no-repeat;
+    background: url(../img/logo_@2x.png) no-repeat;
     background-size: 100%;
   }
   
   .search-form label {
-    background: url(/assets/img/ico_search_@2x.png) no-repeat;
+    background: url(../img/ico_search_@2x.png) no-repeat;
     background-size: 100%;
   }
 }

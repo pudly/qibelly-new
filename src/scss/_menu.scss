@@ -20,7 +20,7 @@
       line-height: 84px;
       
       a {
-        font-size: 24px;
+        font-size: 1.5em;
         color: #fff;
         text-decoration: none;
         font-weight: 200;
@@ -49,10 +49,21 @@
 	cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $break-small) {
+  .main-navigation {
+    float: right;
+    margin: $vspacing 0 0 $vspacing;
+  }
+  
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    text-indent: 100%;
+    background: url(../img/ico_pulltab.png) no-repeat 50% 50%;
+
   }
 
   .main-navigation ul {

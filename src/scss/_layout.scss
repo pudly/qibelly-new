@@ -1,3 +1,16 @@
+.site-content {
+  max-width: $grid-total;
+  @include clearfix();
+  margin: 0 auto;
+  padding-top: $vspacing;
+  
+  h2 {
+    font-size: 2.2em;
+    margin-bottom: $vspacing;
+    line-height: 1em;
+  }
+}
+
 @media only screen and (min-width: $break-tiny) {
 
 }

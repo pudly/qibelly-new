@@ -1,19 +1,24 @@
-/* =Widgets
------------------------------------------------ */
+/* ============================================================
+
+  Primary Navigation
+
+============================================================ */
 
 .widget {
-	margin: 0 0 $vspacing;
-
-	/* Make sure select elements fit in widgets */
-	select {
-		max-width: 100%;
-	}
-
-	/* Search widget */
-	.widget-search .search-submit {
-		display: none;
-	}
-
+  float: left;
+  padding: $vspacing $vspacing $vspacing 0;
 }
 
+/* widget classes
+----------------------------------------------- */
 
+
+/* home page grid
+----------------------------------------------- */
+#page-home {
+  .widget-classes   { width: 33% }
+  .widget-videos    { width: 33% }
+  .widget-location  { width: 33%; margin-right: 0 }
+  .widget-blog      { width: 66%; margin-right: 0 }
+  
+}

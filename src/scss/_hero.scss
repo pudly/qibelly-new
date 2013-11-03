@@ -1,53 +1,44 @@
+/* ============================================================
+
+  Home page Hero Slider
+
+============================================================ */
+
 .hero {
   width: 100%;
-  height: 480px;
-  background: url(/assets/img/hero_sm.jpg) no-repeat center center;
+  background: url(../img/hero_sm.jpg) no-repeat 0 center;
   background-size: 140% auto;
+  font-size: .6em;
   
   .hero-items {
     list-style: none;
     margin: 0 auto;
-    padding: 124px 0 0 0;
+    padding: ($logo-height + $vspacing * 2) $vspacing 0 $vspacing;
     width: 100%;
-    height: 480px;
-    max-width: 976px;
+    height: 100%;
+    max-width: $grid-total;
     
     li {
       display: block;
-      width: 100%;
       position: relative;
-      
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 340px;
-      
-      & > div {
-        width: 480px;
-        float: left;
-        padding-left: 15px;
-      }
+      text-align: center;
       
       h2 {
-        font-size: 48px;
+        font-size: 3em;
         font-weight: 600;
         text-transform: uppercase;
         color: #fff;
         background: $colour-red;
         display: inline;
-        letter-spacing: -1px;
+        letter-spacing: -.05em;
         
         box-shadow: 15px 0 0 $colour-red, -15px 0 0 $colour-red;
         line-height: 1.35em;
       }
       
       a {
-        
-        float: right;
-        text-align: right;
-        max-width: 280px;
 
-        font-size: 48px;
+        font-size: 3em;
         font-weight: 200;
         letter-spacing: -1px;
         text-decoration: none;
@@ -55,18 +46,21 @@
 
         color: rgba(255,255,255,.8);
         
-        background: url(../img/ico_hero-arrow.png) no-repeat 98% 50%;
-        padding-right: $vspacing * 1.75;
+        display: block;
+        margin: $vspacing 0;
+        background: none !important;
         
         strong {
           text-transform: uppercase;
         }
-        
+
         &:hover {
           color: #fff;
           background-position: 100% 50%;
-          padding-right: $vspacing * 2;
+          padding: 0;
+          padding-top: $vspacing / 2;
         }
+        
       }
     }
   }
@@ -84,15 +78,76 @@
   }
 }
 
+@media only screen and (min-width: $break-mini) { 
+    .hero-items {
+      li {
+        width: 60%;
+        margin: auto;
+      }
+    }
+}
+
 @media only screen and (min-width: $break-small) { 
   .hero {
-    background-image: url(/assets/img/hero_md.jpg);
+    background-image: url(../img/hero_md.jpg);
+    font-size: .7em;
+    height: 320px;
+  }
+}
+
+@media only screen and (min-width: $break-medium) { 
+  .hero {
+    background-image: url(../img/hero_md.jpg);    
+    height: 380px;
+    
+    .hero-items {
+      font-size: 1em;
+      padding: ($logo-height + $vspacing * 2) 0 0 0;
+      
+      li {             
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+      
+        & > div {
+          width: 50%;
+          float: left;
+          padding-left: 15px;
+          text-align: left;
+        }
+        
+        a {
+          float: right;
+          text-align: right;
+          background: url(../img/ico_hero-arrow.png) no-repeat 98% 50% !important;
+          padding-right: $vspacing * 1.75;
+          
+          &:hover {
+            color: #fff;
+            background-position: 100% 50%;
+            padding: 0;
+            padding-right: $vspacing * 2;
+          }
+
+        }      
+    }
   }
 }
 @media only screen and (min-width: $break-large) { 
+  .hero {
+    height: 480px;    
+    font-size: 1em;
+    
+    .hero-items {
+
+      }
+    }
+  }
 }
 @media only screen and (min-width: $break-huge) {
   .hero {
-    background-image: url(/assets/img/hero_lg.jpg)
+    background-image: url(../img/hero_lg.jpg)
   }
 }

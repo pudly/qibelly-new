@@ -32,3 +32,8 @@ $break-huge: 1280px;
 @media only screen and (min-width: $break-medium) { }
 @media only screen and (min-width: $break-large) { }
 @media only screen and (min-width: $break-huge) { }
+
+
+/* Grid */
+$grid-total: 976px;
+$grid-third: 312px;

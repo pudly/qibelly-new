@@ -1,26 +1,34 @@
-/* =Content
------------------------------------------------ */
+/* ============================================================
+
+  Content
+
+============================================================ */
 
 .sticky {
 }
+
 .hentry {
-	margin: 0 0 $vspacing;
+  margin: 0 0 $vspacing;
 }
+
 .byline,
 .updated {
-	display: none;
+  display: none;
 }
+
 .single, .group-blog {
-	.byline {
-		display: inline;
-	}
+  .byline {
+    display: inline;
+  }
 }
+
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $vspacing 0 0;
+  margin: $vspacing 0 0;
 }
+
 .page-links {
-	clear: both;
-	margin: 0 0 $vspacing;
+  clear: both;
+  margin: 0 0 $vspacing;
 }
