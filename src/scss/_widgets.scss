@@ -1,24 +1,123 @@
 /* ============================================================
 
-  Primary Navigation
+  Reusable Widgets
 
 ============================================================ */
 
 .widget {
-  float: left;
-  padding: $vspacing $vspacing $vspacing 0;
+  padding: $vspacing 0;
 }
 
-/* widget classes
------------------------------------------------ */
+@media only screen and (min-width: $break-mini) {
+  .widget {
+    float: left;
+    padding: $vspacing $vspacing $vspacing 0;
+  }
+}
 
+@media only screen and (min-width: $break-medium) {
+  .widget {
+    float: left;
+    padding: $vspacing $vspacing $vspacing 0;
+  }
+}
+
+/* CLASSES Widget
+----------------------------------------------- */
+.widget-classes {
+  .day {
+    h3 {
+      color: #fff;
+      font-size: 1.1em;
+      line-height: 1;
+      font-weight: 300;
+      background: $colour-black;
+      display: inline-block;
+      padding: $vspacing/3 $vspacing/2;
+      text-transform: uppercase;
+      margin-bottom: $gutter;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 $vspacing/2 0;
+      
+      li {
+        margin-bottom: $gutter;
+        
+        a {
+          display: block;
+          
+          background: $colour-white;
+          padding: $vspacing/2;
+          
+          font-weight: 400;
+          text-decoration: none;
+          color: $colour-red;
+          font-size: 1.2em;
+          line-height: 1em;
+          
+          position: relative;
+          
+          em {
+            font-style: normal;
+            font-weight: 200;
+            color: $colour-gray;
+            display: block;
+            font-size: .9em;
+          }
+          
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 8px;
+            height: 100%;
+            background: url(../img/ico_hero-arrow.png) no-repeat 0 50%;
+            background-size: 8px auto;
+            right: $vspacing/2;
+            
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;                
+          }
+          
+          &:hover {
+            background: $colour-black;
+            z-index: 1;
+            padding: $vspacing/2 $vspacing/1.5;
+            
+            em {
+              color: #aaa;
+            }
+            
+            &:after {
+              right: $vspacing/1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 /* home page grid
 ----------------------------------------------- */
-#page-home {
-  .widget-classes   { width: 33% }
-  .widget-videos    { width: 33% }
-  .widget-location  { width: 33%; margin-right: 0 }
-  .widget-blog      { width: 66%; margin-right: 0 }
-  
+@media only screen and (min-width: $break-mini) {
+  #page-home {
+    .widget-classes   { width: 50% }
+    .widget-videos    { width: 50% }
+    .widget-location  { width: 50%; }
+    .widget-blog      { width: 100%; }
+  }
+}
+@media only screen and (min-width: $break-medium) {
+  #page-home {
+    .widget-classes   { width: 33% }
+    .widget-videos    { width: 33% }
+    .widget-location  { width: 33%; }
+    .widget-blog      { width: 66%; }
+  }
 }

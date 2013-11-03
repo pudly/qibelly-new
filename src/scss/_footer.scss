@@ -1,0 +1,34 @@
+/* ============================================================
+
+  Content
+
+============================================================ */
+
+footer {
+  clear: all;
+  margin-top: $vspacing*4;
+  background: $colour-black;
+  min-height: 400px;
+  
+  position: relative;
+  
+  &:before {
+    content: '';
+    width: 220px;
+    height: 246px;
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    margin-left: -110px;
+    
+    background: url(../img/buddha.png) no-repeat;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+ footer:before {
+    background-image: url(../img/buddha_@2x.png);
+    background-size: 100% auto;
+  } 
+}

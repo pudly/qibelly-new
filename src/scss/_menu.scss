@@ -20,7 +20,7 @@
       line-height: 84px;
       
       a {
-        font-size: 1.5em;
+        font-size: 1.1em;
         color: #fff;
         text-decoration: none;
         font-weight: 200;
@@ -49,21 +49,36 @@
 	cursor: pointer;
 }
 
+@media screen and (min-width: $break-medium){
+  .main-navigation ul li a {
+    font-size: 1.5em;
+  }
+}
+
+
 @media screen and (max-width: $break-small) {
   .main-navigation {
     float: right;
     margin: $vspacing 0 0 $vspacing;
   }
   
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
+  .menu-toggle {
+    margin: 0;
+    padding: 0;
     display: block;
     width: 44px;
     height: 44px;
     overflow: hidden;
     text-indent: 100%;
     background: url(../img/ico_pulltab.png) no-repeat 50% 50%;
-
+  }
+  
+  @media (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+    .menu-toggle {
+      background: url(../img/ico_pulltab_@2x.png) no-repeat 50% 50%;
+      background-size: 36px auto;
+    }
   }
 
   .main-navigation ul {

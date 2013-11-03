@@ -1,14 +1,14 @@
 {
-  "name": "fireshell",
-  "title": "Fiercely quick and opinionated front-ends",
-  "url": "http://getfireshell.com",
-  "author": "Todd Motto",
+  "name": "QiBelly",
+  "title": "QiBelly.com Wordpress Template",
+  "url": "http://qibelly.com",
+  "author": "Pud.ca // andrej",
   "copyright": "2013",
-  "version": "1.1.0",
-  "license": "MIT",
+  "version": "1.0",
+  "license": " ",
   "repository": {
     "type": "git",
-    "url": "http://github.com/toddmotto/fireshell.git"
+    "url": "http://github.com/pudly/qibelly-new.git"
   },
   "devDependencies": {
     "bower": "~1.2.6",

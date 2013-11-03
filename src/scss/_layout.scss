@@ -1,8 +1,14 @@
+/* ============================================================
+
+  Layout Structure
+
+============================================================ */
+
 .site-content {
   max-width: $grid-total;
   @include clearfix();
   margin: 0 auto;
-  padding-top: $vspacing;
+  padding: $vspacing;
   
   h2 {
     font-size: 2.2em;
@@ -21,7 +27,9 @@
 
 }
 @media only screen and (min-width: $break-medium) {
-
+  .site-content {
+    padding: $vspacing 0 0 0;
+  }
 }
 @media only screen and (min-width: $break-large) {
 

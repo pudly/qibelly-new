@@ -6,8 +6,8 @@
 
 .hero {
   width: 100%;
-  background: url(../img/hero_sm.jpg) no-repeat 0 center;
-  background-size: 140% auto;
+  background: url(../img/hero_sm.jpg) no-repeat center center;
+  background-size: cover;
   font-size: .6em;
   
   .hero-items {
@@ -47,8 +47,9 @@
         color: rgba(255,255,255,.8);
         
         display: block;
-        margin: $vspacing 0;
-        background: none !important;
+        padding: $vspacing/2 0 $vspacing*2 0;
+        background: none;
+        position: relative;
         
         strong {
           text-transform: uppercase;
@@ -56,25 +57,39 @@
 
         &:hover {
           color: #fff;
-          background-position: 100% 50%;
-          padding: 0;
-          padding-top: $vspacing / 2;
+          padding-top: $vspacing;
+          
+          &:after {
+            bottom: $vspacing/4;
+          }
         }
         
+        &:after {
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 40px;
+          background: url(../img/ico_hero-arrow.png) no-repeat 0 50%;
+          background-size: 10px auto;
+          
+          bottom: $vspacing/2;
+          left: 50%;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+
+          -webkit-transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;    
+        }
       }
     }
   }
   
   .hero-control {
     display: none;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
-  .hero .hero-items li a {
-    background: url(../img/ico_hero-arrow_@2x.png) no-repeat 98% 50%;
-    background-size: 16px auto;
   }
 }
 
@@ -91,17 +106,16 @@
   .hero {
     background-image: url(../img/hero_md.jpg);
     font-size: .7em;
-    height: 320px;
   }
 }
 
 @media only screen and (min-width: $break-medium) { 
   .hero {
     background-image: url(../img/hero_md.jpg);    
-    height: 380px;
+    height: 340px;
+    font-size: .85em;
     
     .hero-items {
-      font-size: 1em;
       padding: ($logo-height + $vspacing * 2) 0 0 0;
       
       li {             
@@ -121,20 +135,32 @@
         a {
           float: right;
           text-align: right;
-          background: url(../img/ico_hero-arrow.png) no-repeat 98% 50% !important;
+          background: url(../img/ico_hero-arrow.png) no-repeat 98% 65%;
+          padding: 0;
           padding-right: $vspacing * 1.75;
           
           &:hover {
             color: #fff;
-            background-position: 100% 50%;
+            background-position: 100% 65% !important;
             padding: 0;
             padding-right: $vspacing * 2;
           }
-
-        }      
+          
+          &:after {
+            display: none;
+          }
+        }
     }
   }
 }
+  
+@media only screen and (min-width: $break-medium) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  .hero .hero-items li a {
+    background: url(../img/ico_hero-arrow_@2x.png) no-repeat 98% 65%;
+    background-size: 16px auto;
+  }
+} 
+  
 @media only screen and (min-width: $break-large) { 
   .hero {
     height: 480px;    
@@ -146,6 +172,7 @@
     }
   }
 }
+
 @media only screen and (min-width: $break-huge) {
   .hero {
     background-image: url(../img/hero_lg.jpg)

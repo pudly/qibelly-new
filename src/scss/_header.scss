@@ -1,6 +1,6 @@
 /* ============================================================
 
-  .site-header
+  Site Header
 
 ============================================================ */
 
@@ -27,11 +27,16 @@ $logo-height: 84px;
   padding: 0;
   display: block;
   overflow: hidden;
-  text-indent: 100%;
+  text-indent: 200%;
   width: 110px;
   height: $logo-height;
   background: url(../img/logo.png) no-repeat;
+  background-size: 100%;
   float: left;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;      
 }
 
 /* search */
@@ -60,13 +65,13 @@ $logo-height: 84px;
     float: right;
     text-indent: $vspacing / 2;
     
-    color: transparent !important;
-    
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;    
-
+    
+    color: transparent !important;
+    
     &::-webkit-input-placeholder {
        color: transparent;
     }
@@ -104,15 +109,58 @@ $logo-height: 84px;
 
 
 /* break points */
+@media only screen and (min-width: $break-mini) { 
+  .search-form {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: $break-small) {
+  .search-form {
+    width: 23%;
+  }
+}
+
+@media only screen and (min-width: $break-small + 100) {
+  .search-form {
+    width: 30%;
+  }
+}
+
 @media only screen and (min-width: $break-medium) { 
   .site-header {
-    position: fixed;
-    width: 100%;
     height: $logo-height;
 
     .site-branding {
       padding: ($vspacing * 2) 0;
       margin: 0 auto;
+    }
+    
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      background: rgba(34,32,32,.9);
+      height: $logo-height;
+      z-index: 100;
+      
+      .site-branding {
+        padding: $vspacing/2 0;
+      }
+      
+      .site-title {
+        width: 110px * .75;
+        height: $logo-height * .75;
+        background-size: 100% auto;
+      }
+      
+      .main-navigation ul li,
+      .search-form {
+        line-height: $logo-height * .75;
+      }
+      
+      .search-form {
+        padding-top: $vspacing/2;
+      }
     }
   }
   
@@ -134,5 +182,3 @@ $logo-height: 84px;
     background-size: 100%;
   }
 }
-
-/* header */
