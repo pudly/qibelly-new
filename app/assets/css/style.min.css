@@ -1033,14 +1033,14 @@ a:visited {
   }
 }
 
-@media only screen and (min-width: 1024px) and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hero .hero-items li a {
     background: url(../img/ico_hero-arrow_@2x.png) no-repeat 98% 65%;
     background-size: 16px auto;
   }
 }
 
-@media only screen and (min-width: 1024px) and (min-width: 1140px) {
+@media only screen and (min-width: 1140px) {
   .hero {
     height: 480px;
     font-size: 1em;
@@ -1316,6 +1316,11 @@ object {
   padding: 20px 0;
 }
 
+.widget .detail {
+  background: #fff;
+  padding: 13.33333px;
+}
+
 @media only screen and (min-width: 480px) {
   .widget {
     float: left;
@@ -1395,7 +1400,7 @@ object {
 }
 
 .widget-classes .day ul li a:hover em {
-  color: #aaa;
+  color: #999999;
 }
 
 .widget-classes .day ul li a:hover:after {
@@ -1412,12 +1417,62 @@ object {
 }
 
 .widget-videos .thumbs li {
-  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.widget-videos .thumbs li:last-child {
+  margin-bottom: 0;
+}
+
+.widget-videos .thumbs li a {
+  text-decoration: none;
+  display: block;
+}
+
+.widget-videos .thumbs li a h3 {
+  color: #221f1f;
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1em;
+  background: #fff;
+  padding: 13.33333px;
+}
+
+.widget-videos .thumbs li a h3 em {
+  font-style: normal;
+  display: block;
+  font-weight: 200;
+  color: #666666;
+}
+
+.widget-videos .thumbs li a:hover {
+  box-shadow: 0 0 0 5px #e1110d;
+}
+
+.widget-videos .thumbs li a:hover h3 {
+  color: #e1110d;
+  background: #221f1f;
+}
+
+.widget-videos .thumbs li a:hover h3 em {
+  color: #999999;
+}
+
+.widget-videos .thumbs li a:hover .thumb-video img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.widget-videos .thumbs li a * {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .widget-videos .thumbs .thumb-video {
   display: block;
   position: relative;
+  overflow: hidden;
 }
 
 .widget-videos .thumbs .thumb-video img {
@@ -1433,10 +1488,53 @@ object {
   height: 44px;
   margin: -22px 0 0 -22px;
   background: url(../img/ico_video.png) no-repeat;
-  background-size: 44px;
+  background-size: 100%;
 }
 
-/* home page grid
+/* LOCATION Widget
+----------------------------------------------- */
+
+.widget-location .map {
+  display: block;
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.widget-location .map img {
+  display: block;
+}
+
+.widget-location .map:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -48px;
+  margin-left: -15px;
+  width: 30px;
+  height: 48px;
+  background: url(../img/ico_pin.png) no-repeat;
+  background-size: 100%;
+}
+
+/* Retina images
+----------------------------------------------- */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* VIDEOS - video play icon */
+
+  .widget-videos .thumbs li .thumb-video:after {
+    background-image: url(../img/ico_video_@2x.png);
+  }
+
+  /* LOCATION - map pin */
+
+  .widget-location .map:after {
+    background-image: url(../img/ico_pin_@2x.png);
+  }
+}
+
+/* Home page grid breakpoints
 ----------------------------------------------- */
 
 @media only screen and (min-width: 480px) {

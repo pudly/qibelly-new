@@ -94,12 +94,12 @@
 }
 
 @media only screen and (min-width: $break-mini) { 
-    .hero-items {
-      li {
-        width: 60%;
-        margin: auto;
-      }
+  .hero-items {
+    li {
+      width: 60%;
+      margin: auto;
     }
+  }
 }
 
 @media only screen and (min-width: $break-small) { 
@@ -150,6 +150,7 @@
             display: none;
           }
         }
+      }
     }
   }
 }
@@ -168,7 +169,6 @@
     
     .hero-items {
 
-      }
     }
   }
 }

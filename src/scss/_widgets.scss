@@ -6,6 +6,11 @@
 
 .widget {
   padding: $vspacing 0;
+  
+  .detail {
+    background: #fff;
+    padding: $vspacing/1.5;
+  }
 }
 
 @media only screen and (min-width: $break-mini) {
@@ -90,7 +95,7 @@
             padding: $vspacing/2 $vspacing/1.5;
             
             em {
-              color: #aaa;
+              color: lighten($colour-gray, 20%)
             }
             
             &:after {
@@ -112,12 +117,62 @@
     list-style: none;
     
     li {
-      overflow: hidden;
+      margin-bottom: $vspacing/2;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      a {
+        text-decoration: none;
+        display: block;
+        
+        h3 {
+          color: $colour-black;
+          font-size: 1.1em;
+          font-weight: 400;
+          line-height: 1em;
+          background: #fff;
+          padding: $vspacing/1.5;
+          
+          em {
+            font-style: normal;
+            display: block;
+            font-weight: 200;
+            color: $colour-gray;
+          }
+        }
+        
+        &:hover {
+          box-shadow: 0 0 0 5px $colour-red;
+          
+          h3 {
+            color: $colour-red;
+            background: $colour-black;
+            
+            em {
+              color: lighten($colour-gray, 20%)
+            }
+          }
+          
+          .thumb-video img {
+            transform: scale(1.2);
+          }
+        }
+        
+        * {
+          -webkit-transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;     
+        }
+      }
     }
     
     .thumb-video {
       display: block;
       position: relative;
+      overflow: hidden;
       
       img {
         display: block;
@@ -132,14 +187,61 @@
         height: 44px;
         margin: -22px 0 0 -22px;
         background: url(../img/ico_video.png) no-repeat;
-        background-size: 44px;
+        background-size: 100%;
       }
+    }
+    
+
+  }
+}
+
+/* LOCATION Widget
+----------------------------------------------- */
+.widget-location {
+  .map {
+    display: block;
+    margin-bottom: $gutter;
+    position: relative;
+    
+    img {
+      display: block;
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -48px;
+      margin-left: -15px;
+      
+      width: 30px;
+      height: 48px;
+      background: url(../img/ico_pin.png) no-repeat;
+      background-size: 100%;
     }
   }
 }
 
 
-/* home page grid
+/* Retina images
+----------------------------------------------- */
+@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  
+  /* VIDEOS - video play icon */
+  .widget-videos .thumbs li .thumb-video:after {
+    background-image: url(../img/ico_video_@2x.png);
+  }
+  
+  /* LOCATION - map pin */
+  .widget-location .map:after {
+    background-image: url(../img/ico_pin_@2x.png);
+  }
+}
+
+
+/* Home page grid breakpoints
 ----------------------------------------------- */
 @media only screen and (min-width: $break-mini) {
   #page-home {
