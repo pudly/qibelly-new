@@ -1445,10 +1445,6 @@ object {
   color: #666666;
 }
 
-.widget-videos .thumbs li a:hover {
-  box-shadow: 0 0 0 5px #e1110d;
-}
-
 .widget-videos .thumbs li a:hover h3 {
   color: #e1110d;
   background: #221f1f;
@@ -1517,6 +1513,69 @@ object {
   background-size: 100%;
 }
 
+/* SOCIAL MEDIA ICONS Widget
+----------------------------------------------- */
+
+.widget-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget-social li {
+  float: left;
+  width: 33%;
+  max-width: 100.66667px;
+  padding: 0 1px;
+}
+
+.widget-social li:first-child {
+  padding-left: 0;
+}
+
+.widget-social li:last-child {
+  padding-right: 0;
+}
+
+.widget-social li a {
+  display: block;
+  height: 100.66667px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.widget-social li a.facebook {
+  background-color: #3b5998;
+  background-image: url(../img/ico_facebook.png);
+  background-size: 20px 36px;
+}
+
+.widget-social li a.facebook:hover {
+  background-color: #1e2e4f;
+}
+
+.widget-social li a.twitter {
+  background-color: #00acee;
+  background-image: url(../img/ico_twitter.png);
+  background-size: 38px 31px;
+}
+
+.widget-social li a.twitter:hover {
+  background-color: #006288;
+}
+
+.widget-social li a.youtube {
+  background-color: #c4302b;
+  background-image: url(../img/ico_youtube.png);
+  background-size: 44px 44px;
+}
+
+.widget-social li a.youtube:hover {
+  background-color: #701c19;
+}
+
 /* Retina images
 ----------------------------------------------- */
 
@@ -1531,6 +1590,20 @@ object {
 
   .widget-location .map:after {
     background-image: url(../img/ico_pin_@2x.png);
+  }
+
+  /* SOCIAL - icons */
+
+  .widget-social li a.facebook {
+    background-image: url(../img/ico_facebook_@2x.png);
+  }
+
+  .widget-social li a.twitter {
+    background-image: url(../img/ico_twitter_@2x.png);
+  }
+
+  .widget-social li a.youtube {
+    background-image: url(../img/ico_youtube_@2x.png);
   }
 }
 

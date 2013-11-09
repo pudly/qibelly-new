@@ -144,8 +144,8 @@
         }
         
         &:hover {
-          box-shadow: 0 0 0 5px $colour-red;
-          
+//          box-shadow: 0 0 0 5px $colour-red;
+
           h3 {
             color: $colour-red;
             background: $colour-black;
@@ -223,6 +223,68 @@
   }
 }
 
+/* SOCIAL MEDIA ICONS Widget
+----------------------------------------------- */
+.widget-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    float: left;
+    width: 33%;
+    max-width: ($grid-third - ($vspacing/2))/3;
+    padding: 0 1px;
+    
+    &:first-child {
+      padding-left: 0;
+    }
+    
+    &:last-child {
+      padding-right: 0;
+    }
+    
+    a {
+      display: block;
+      height: ($grid-third - ($vspacing/2))/3;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      
+      text-indent: 100%;
+      overflow: hidden;
+      
+      &.facebook {
+        background-color: $colour-facebook;
+        background-image: url(../img/ico_facebook.png);
+        background-size: 20px 36px;
+        
+        &:hover {
+          background-color: darken($colour-facebook, 20%);
+        }
+      }
+
+      &.twitter {
+        background-color: $colour-twitter;
+        background-image: url(../img/ico_twitter.png);
+        background-size: 38px 31px;
+        
+        &:hover {
+          background-color: darken($colour-twitter, 20%);
+        }
+      }
+
+      &.youtube {
+        background-color: $colour-youtube;
+        background-image: url(../img/ico_youtube.png);
+        background-size: 44px 44px;
+        
+        &:hover {
+          background-color: darken($colour-youtube, 20%);
+        }
+      }
+    }
+  }
+}
 
 /* Retina images
 ----------------------------------------------- */
@@ -238,6 +300,11 @@
   .widget-location .map:after {
     background-image: url(../img/ico_pin_@2x.png);
   }
+  
+  /* SOCIAL - icons */
+  .widget-social li a.facebook { background-image: url(../img/ico_facebook_@2x.png); }
+  .widget-social li a.twitter { background-image: url(../img/ico_twitter_@2x.png); }
+  .widget-social li a.youtube { background-image: url(../img/ico_youtube_@2x.png); }
 }
 
 
