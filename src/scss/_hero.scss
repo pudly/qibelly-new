@@ -1,6 +1,6 @@
 /* ============================================================
 
-  Home page Hero Slider
+  Home Page Hero Area
 
 ============================================================ */
 
@@ -155,7 +155,7 @@
   }
 }
   
-@media only screen and (min-width: $break-medium) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+@media only screen and (min-width: $break-medium) and (-webkit-min-device-pixel-ratio: 2), (min-width: $break-medium) and (min-resolution: 192dpi) { 
   .hero .hero-items li a {
     background: url(../img/ico_hero-arrow_@2x.png) no-repeat 98% 65%;
     background-size: 16px auto;

@@ -7,19 +7,6 @@
  * Copyright 2013.   licensed.
  */
 
-/*!
-Theme Name: QiBelly
-Theme URI: http://www.qibelly.com
-Author: Pud.ca // `drej (c) 2013
-Author URI: http://pud.ca/
-Description: 
-Version: 1.0
-License: 
-License URI: 
-Domain Path: /languages/
-Text Domain:
-Tags:
-*/
 /* =Reset
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
@@ -754,7 +741,7 @@ a:visited {
 }
 /* ============================================================
 
-  Home page Hero Slider
+  Home Page Hero Area
 
 ============================================================ */
 .hero {
@@ -882,7 +869,7 @@ a:visited {
     display: none;
   }
 }
-@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (min-resolution: 192dpi) {
   .hero .hero-items li a {
     background: url(../img/ico_hero-arrow_@2x.png) no-repeat 98% 65%;
     background-size: 16px auto;
