@@ -167,7 +167,7 @@
           <span class="adr-unit">(2nd Floor)</span>
         </address>
         <ul class="contact">
-          <li><a href="tel:4168774206" class="telephone">(416) 877-4106</a></li>
+          <li><a href="tel:4168774206" class="phone">(416) 877-4106</a></li>
           <li><a href="mailto:paul@qibelly.com" class="email">paul@qibelly.com</a></li>
         </ul>
         <ul class="widget-social">
@@ -179,6 +179,26 @@
       
       <section class="widget widget-blog">
         <h2>From the Blog</h2>
+        
+        <article class="entry">
+          <header class="entry-header">
+            <a href="">
+              <img src="http://placehold.it/1280x720" class="entry-image">
+              <h2 class="entry-title">Upcoming Reiki Classes</h2>
+              <h3 class="entry-meta">Posted By <strong>Paul Lara</strong> - Sep 2nd, 2013</h3>
+            </a>
+          </header>
+          <div class="entry-content">
+            <p>On Saturday, September 21st, I will be running the first portion of a Reiki Level 1 group class. The session will run from 1-4pm. The following week, same day and time, the second half of the class will be held. As a follow up, and this is not mandatory, I will set up a Q/A period for October 5th.</p>
+            <p>On Saturday, October 19th, I will run a Reiki Level 2 group class with the same basic layout for scheduling. Classes will be scheduled on consecutive Saturdays and will run from 1-4pm.</p>
+          </div>
+          <footer class="entry-social">
+            <ul class="widget-social">
+              <li><a href="" class="facebook">Facebook</a></li>
+              <li><a href="" class="twitter">Twitter</a></li>
+            </ul>          
+          </footer>
+        </article>
       </section><!-- .widget-blog -->
     </main><!-- .site-content -->
 
@@ -186,7 +206,7 @@
 
     </aside>
 
-    <footer class="footer" role="contentinfo">
+    <footer class="page-footer" role="contentinfo">
 
     </footer>
 
@@ -194,9 +214,7 @@
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/js/scripts.min.js"></script>
 
-    <script>
-      // google analytics
-      
+    <script> // google analytics
       (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
       (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
       l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
@@ -205,15 +223,15 @@
       ga('send', 'pageview');
     </script>
     
-    <script>
-      // TOTALLY TEMPORARY
-      var header = document.querySelector('.site-header');
+    <script> // temporary
       
+      // sticky header after 40px of scroll
+      var header = document.querySelector('.site-header');
       function onScroll(e) {
         window.scrollY >= 40 ? header.classList.add('sticky') : header.classList.remove('sticky');
       }
-      
       document.addEventListener('scroll', onScroll);    
+
     </script>
 
   </body>

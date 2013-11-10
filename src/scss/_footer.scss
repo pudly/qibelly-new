@@ -4,7 +4,7 @@
 
 ============================================================ */
 
-footer {
+.page-footer {
   clear: all;
   margin-top: $vspacing*4;
   background: $colour-black;
@@ -27,7 +27,7 @@ footer {
 
 @media (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
- footer:before {
+  .page-footer:before {
     background-image: url(../img/buddha_@2x.png);
     background-size: 100% auto;
   } 

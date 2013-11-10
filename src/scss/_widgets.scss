@@ -16,15 +16,13 @@
 @media only screen and (min-width: $break-mini) {
   .widget {
     float: left;
-    padding: $vspacing $vspacing $vspacing 0;
+    padding-left: $vspacing/2;
+    padding-right: $vspacing/2;
   }
 }
 
 @media only screen and (min-width: $break-medium) {
-  .widget {
-    float: left;
-    padding: $vspacing $vspacing $vspacing 0;
-  }
+
 }
 
 /* CLASSES Widget
@@ -144,15 +142,8 @@
         }
         
         &:hover {
-//          box-shadow: 0 0 0 5px $colour-red;
-
           h3 {
             color: $colour-red;
-            background: $colour-black;
-            
-            em {
-              color: lighten($colour-gray, 20%)
-            }
           }
           
           .thumb-video img {
@@ -198,9 +189,10 @@
 /* LOCATION Widget
 ----------------------------------------------- */
 .widget-location {
+  
+  /* map area */
   .map {
     display: block;
-    margin-bottom: $gutter;
     position: relative;
     
     img {
@@ -221,6 +213,63 @@
       background-size: 100%;
     }
   }
+  
+  address {
+    padding: $vspacing/1.5;
+    background: #fff;
+    line-height: 1em;
+    margin-bottom: $gutter;
+    
+    h3 {
+      font-size: 1.2em;
+      font-weight: 400;
+      margin-bottom: .25em;
+    }
+    
+    span {
+      display: block;
+      color: $colour-gray;
+    }
+  }
+  
+  /* contacts list */
+  .contact {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    li {
+      margin-bottom: $gutter;
+      
+      a {
+        display: block;
+        padding: $vspacing/1.5;
+        
+        color: $colour-black;
+        text-decoration: none;
+        text-indent: $vspacing*1.25;
+        line-height: 1em;
+        
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: $vspacing/1.5 50%;
+        
+        &.phone {
+          background-image: url(../img/ico_phone.png);
+          background-size: 16px 16px;
+        }
+        
+        &.email {
+          background-image: url(../img/ico_email.png);
+          background-size: 18px 12px;
+        }
+        
+        &:hover {
+          color: $colour-red;
+        }
+      }
+    }
+  }
 }
 
 /* SOCIAL MEDIA ICONS Widget
@@ -229,12 +278,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   
   li {
     float: left;
-    width: 33%;
-    max-width: ($grid-third - ($vspacing/2))/3;
+    width: 33.333333%;
     padding: 0 1px;
+    height: ($grid-third - ($vspacing/2))/3;
     
     &:first-child {
       padding-left: 0;
@@ -246,10 +296,9 @@
     
     a {
       display: block;
-      height: ($grid-third - ($vspacing/2))/3;
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      
+      height: 100%;
       text-indent: 100%;
       overflow: hidden;
       
@@ -301,6 +350,10 @@
     background-image: url(../img/ico_pin_@2x.png);
   }
   
+  /* CONTACT - icons */
+  .widget-location .contact li a.phone { background-image: url(../img/ico_phone_@2x.png); }
+  .widget-location .contact li a.email { background-image: url(../img/ico_email_@2x.png); }
+  
   /* SOCIAL - icons */
   .widget-social li a.facebook { background-image: url(../img/ico_facebook_@2x.png); }
   .widget-social li a.twitter { background-image: url(../img/ico_twitter_@2x.png); }
@@ -314,15 +367,15 @@
   #page-home {
     .widget-classes   { width: 50% }
     .widget-videos    { width: 50% }
-    .widget-location  { width: 50%; }
-    .widget-blog      { width: 100%; }
+    .widget-location  { width: 50% }
+    .widget-blog      { width: 100% }
   }
 }
 @media only screen and (min-width: $break-medium) {
   #page-home {
-    .widget-classes   { width: 33% }
-    .widget-videos    { width: 33% }
-    .widget-location  { width: 33%; }
-    .widget-blog      { width: 66%; }
+    .widget-classes   { width: 33.33333% }
+    .widget-videos    { width: 33.33333% }
+    .widget-location  { width: 33.33333% }
+    .widget-blog      { width: 66.66666% }
   }
 }

@@ -891,14 +891,14 @@ a:visited {
   Content
 
 ============================================================ */
-footer {
+.page-footer {
   clear: all;
   margin-top: 80px;
   background: #221f1f;
   min-height: 400px;
   position: relative;
 }
-footer:before {
+.page-footer:before {
   content: '';
   width: 220px;
   height: 246px;
@@ -910,7 +910,7 @@ footer:before {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  footer:before {
+  .page-footer:before {
     background-image: url(../img/buddha_@2x.png);
     background-size: 100% auto;
   }
@@ -933,15 +933,97 @@ footer:before {
   display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 20px 0 0;
-}
-
 .page-links {
   clear: both;
   margin: 0 0 20px;
+}
+
+/* Blog Entry
+----------------------------------------------- */
+.entry {
+  background: #fff;
+  margin: 0 0 80px 0;
+  position: relative;
+}
+
+.entry-header {
+  position: relative;
+  overflow: hidden;
+}
+.entry-header a {
+  text-decoration: none;
+}
+.entry-header a:hover img {
+  transform: scale(1.2);
+}
+.entry-header img {
+  display: block;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+.entry-header h2, .entry-header h3 {
+  position: absolute;
+}
+.entry-header h2 {
+  margin: 0;
+  left: 0;
+  bottom: 60px;
+  padding: 20px;
+  background: #221f1f;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1em;
+}
+.entry-header h3 {
+  left: 0;
+  bottom: 30px;
+  padding: 0 20px;
+  height: 30px;
+  line-height: 28px;
+  background: #e1110d;
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .entry-header h2, .entry-header h3 {
+    position: relative;
+    bottom: 0;
+  }
+}
+.entry-content {
+  padding: 20px;
+}
+.entry-content p {
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+.entry-content p:last-child {
+  margin: 0;
+}
+
+.entry-social {
+  position: absolute;
+  bottom: -82px;
+  right: 0;
+}
+.entry-social .widget-social li {
+  float: right;
+  width: 80px;
+  height: 80px;
+  padding: 0 0 0 2px !important;
+}
+.entry-social .widget-social li a {
+  background-size: auto 30% !important;
+}
+.entry-social .widget-social:before {
+  content: "Share this article";
+  line-height: 80px;
+  color: #666666;
+  padding-right: 20px;
 }
 
 /* =Asides
@@ -1132,13 +1214,8 @@ object {
 @media only screen and (min-width: 480px) {
   .widget {
     float: left;
-    padding: 20px 20px 20px 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .widget {
-    float: left;
-    padding: 20px 20px 20px 0;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 /* CLASSES Widget
@@ -1239,10 +1316,6 @@ object {
 }
 .widget-videos .thumbs li a:hover h3 {
   color: #e1110d;
-  background: #221f1f;
-}
-.widget-videos .thumbs li a:hover h3 em {
-  color: #999999;
 }
 .widget-videos .thumbs li a:hover .thumb-video img {
   transform: scale(1.2);
@@ -1275,9 +1348,12 @@ object {
 
 /* LOCATION Widget
 ----------------------------------------------- */
+.widget-location {
+  /* map area */
+  /* contacts list */
+}
 .widget-location .map {
   display: block;
-  margin-bottom: 2px;
   position: relative;
 }
 .widget-location .map img {
@@ -1295,6 +1371,51 @@ object {
   background: url(../img/ico_pin.png) no-repeat;
   background-size: 100%;
 }
+.widget-location address {
+  padding: 13.33333px;
+  background: #fff;
+  line-height: 1em;
+  margin-bottom: 2px;
+}
+.widget-location address h3 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: .25em;
+}
+.widget-location address span {
+  display: block;
+  color: #666666;
+}
+.widget-location .contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.widget-location .contact li {
+  margin-bottom: 2px;
+}
+.widget-location .contact li a {
+  display: block;
+  padding: 13.33333px;
+  color: #221f1f;
+  text-decoration: none;
+  text-indent: 25px;
+  line-height: 1em;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 13.33333px 50%;
+}
+.widget-location .contact li a.phone {
+  background-image: url(../img/ico_phone.png);
+  background-size: 16px 16px;
+}
+.widget-location .contact li a.email {
+  background-image: url(../img/ico_email.png);
+  background-size: 18px 12px;
+}
+.widget-location .contact li a:hover {
+  color: #e1110d;
+}
 
 /* SOCIAL MEDIA ICONS Widget
 ----------------------------------------------- */
@@ -1302,12 +1423,13 @@ object {
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .widget-social li {
   float: left;
-  width: 33%;
-  max-width: 100.66667px;
+  width: 33.333333%;
   padding: 0 1px;
+  height: 100.66667px;
 }
 .widget-social li:first-child {
   padding-left: 0;
@@ -1317,9 +1439,9 @@ object {
 }
 .widget-social li a {
   display: block;
-  height: 100.66667px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  height: 100%;
   text-indent: 100%;
   overflow: hidden;
 }
@@ -1361,6 +1483,15 @@ object {
     background-image: url(../img/ico_pin_@2x.png);
   }
 
+  /* CONTACT - icons */
+  .widget-location .contact li a.phone {
+    background-image: url(../img/ico_phone_@2x.png);
+  }
+
+  .widget-location .contact li a.email {
+    background-image: url(../img/ico_email_@2x.png);
+  }
+
   /* SOCIAL - icons */
   .widget-social li a.facebook {
     background-image: url(../img/ico_facebook_@2x.png);
@@ -1392,16 +1523,16 @@ object {
 }
 @media only screen and (min-width: 1024px) {
   #page-home .widget-classes {
-    width: 33%;
+    width: 33.33333%;
   }
   #page-home .widget-videos {
-    width: 33%;
+    width: 33.33333%;
   }
   #page-home .widget-location {
-    width: 33%;
+    width: 33.33333%;
   }
   #page-home .widget-blog {
-    width: 66%;
+    width: 66.66666%;
   }
 }
 /* =Infinite Scroll
