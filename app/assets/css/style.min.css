@@ -1179,6 +1179,7 @@ a:visited {
   position: absolute;
   bottom: -82px;
   right: 0;
+  width: 100%;
 }
 
 .entry-social .widget-social li {
@@ -1192,11 +1193,12 @@ a:visited {
   background-size: auto 30% !important;
 }
 
-.entry-social .widget-social:before {
+.entry-social .widget-social:after {
   content: "Share this article";
   line-height: 80px;
   color: #666666;
   padding-right: 20px;
+  float: right;
 }
 
 /* =Asides

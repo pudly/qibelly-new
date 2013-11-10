@@ -115,6 +115,7 @@
   position: absolute;
   bottom: -$vspacing*4-$gutter;
   right: 0;
+  width: 100%;
   
   .widget-social li {
     float: right;
@@ -127,10 +128,11 @@
     }
   }
   
-  .widget-social:before {
+  .widget-social:after {
     content: "Share this article";
     line-height: $vspacing*4;
     color: $colour-gray;
     padding-right: $vspacing;
+    float: right;
   }
 }
