@@ -90,7 +90,11 @@
 }
 
 @media only screen and (max-width: $break-mini) { 
-  .entry-header {    
+  .entry-header {
+    h2 {
+      font-size: 1.4em;
+    }
+    
     h2,h3 {
       position: relative;
       bottom: 0;
